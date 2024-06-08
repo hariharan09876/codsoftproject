@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVEST WISE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>INVEST WISE</h1>
+        <div class="navbar-links">
+            <p class="navbar-link">
+                <a href="index.html">Home</a>
+            </p>
+            <p class="navbar-link">
+                <a href="collection.html">Voltality Index</a>
+            </p>
+            <p class="navbar-link">
+                <a href="contact.html">Contact</a>
+            </p>
+        </div>
+        <div class="navbar-menu-toggle"onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+<div class="side-navbar">
+    <p style="text-align: right;" onclick="closeNavbar()">
+        <i class="fa-solid fa-xmark"></i>
+    </p>
+    <div class="side-navbar-links">
+        <p class="navbar-link">
+            <a href="index.html">Home</a>
+        </p>
+        <p class="side-navbar-link">
+            <a href="collection.html">Voltality Index</a>
+        </p>
+        <p class="side-navbar-link">
+            <a href="contact.html">Contact</a>
+        </p>
+    </div>
+   
+</div>
+
+<div class="product-section">
+    <form class="product-search">
+        <input type="text"id="search" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </form>
+    <h2>Low-Volatile Stocks</h2>
+    <div class="products" id="products">
+        <div class="product-box"></div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Mrf-logo.png" height="200" width="200">
+        <p>MRF</p>
+    
+        <img src="data:image/png;base64,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" height="200" width="200">
+        <p>RELIANCE</p>
+    
+        <a href="https://www.google.com/search?q=tata+motors+share&sca_esv=cdc18846ebd0314a&rlz=1C1OPNX_enIN1087IN1088&ei=MCD8ZfTVLbfVseMPtbuToAk&oq=tata+motors+&gs_lp=Egxnd3Mtd2l6LXNlcnAiDHRhdGEgbW90b3JzICoCCAEyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATIKEAAYgAQYigUYQzILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMggQABiABBixAzIIEAAYgAQYsQNIhytQxQRY1RdwAXgBkAEAmAGOAaABiAeqAQMxLje4AQHIAQD4AQGYAgmgAskHwgIKEAAYRxjWBBiwA8ICDRAAGIAEGIoFGEMYsAPCAg4QABjkAhjWBBiwA9gBAcICExAuGIAEGIoFGEMYyAMYsAPYAQLCAhkQLhhDGMcBGNEDGIAEGIoFGMgDGLAD2AECwgITEC4YQxjHARixAxjRAxiABBiKBcICEBAAGIAEGIoFGEMYsQMYgwHCAhAQLhiABBiKBRhDGMcBGNEDwgITEC4YgAQYigUYQxixAxjHARjRA8ICDRAAGIAEGIoFGEMYsQPCAiIQLhhDGMcBGLEDGNEDGIAEGIoFGJcFGNwEGN4EGOAE2AEDwgIWEC4YgAQYigUYQxixAxjJAxjHARjRA8ICCBAAGIAEGJIDwgILEAAYgAQYigUYkgPCAiUQLhiABBiKBRhDGLEDGMkDGMcBGNEDGJcFGNwEGN4EGOAE2AEDmAMAiAYBkAYTugYGCAEQARgJugYGCAIQARgIugYGCAMQARgUkgcDMS44oAfxRA&sclient=gws-wiz-serp"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1200px-Tata_logo.svg.png"height=200;wis></a>
+        <p>TATA</p>
+    
+        <img src="data:image/png;base64,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" height="200" width="200">
+        <p>HDFC</p>
+    </div>
+    <h2>MEDIUM VOLATILE STOCKS</h2>
+    <div class="products" id="products">
+        <div class="product-box"></div>
+        <img src="https://imagedelivery.net/5MYSbk45M80qAwecrlKzdQ/0b02ce61-abb1-4369-50a9-8548e0cf8400/public" height="200" width="200">
+        <p>ZOMATO</p>
+    
+        <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/paytm_icon-icons.com_62778.png" height="200" width="200">
+        <p>PAYTM</p>
+    
+        <img src="https://img.etimg.com/thumb/height-450,width-600,imgsize-41282,msid-77515791/.jpg" height="200" width="200">
+        <p>DMART</p>
+    
+        <img src="data:image/png;base64,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" height="200" width="200">
+        <p>IDFC</p>
+    </div>
+
+    <h2>HIGH VOLATILE STOCKS</h2>
+    <div class="products" id="products">
+        <div class="product-box"></div>
+        <img src="data:image/png;base64,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" height="200" width="200">
+        <p>SNITCH</p>
+    
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/JSW_Group_Logo.jpg/480px-JSW_Group_Logo.jpg" height="200" width="200">
+        <p>JSW</p>
+    
+        <img src="https://www.india.com/wp-content/uploads/2023/03/ezgif.com-resize-25.jpg" height="200" width="200">
+        <p>IDBI</p>
+    
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_kTKvWwruBM1RG_1-oJOeTepoTuDbhu7zvzFjMi0A=s900-c-k-c0x00ffffff-no-rj" height="200" width="200">
+        <p>UNILIVER</p>
+    </div>
+
+<div class="footer">
+    <div class="footer container">
+        <div class="footer-box-1">
+            <h2 class="headingText">
+                Invest WIse
+            </h2>
+            <p>Invest is trading brokerage that allows you to buy and sell stocks</p>
+            <div class="footer-icon-container">
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter"style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook"style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
+    <p>
+        @2024 Investwise.com
+    </p>
+</div>
+
+<script src="collection.js"></script>
+
+</body>
+
+</html>
